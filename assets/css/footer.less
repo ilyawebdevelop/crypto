@@ -1,0 +1,143 @@
+// main: main.less
+.footer {
+  padding-bottom: 1.7rem;
+  padding-top: 5.5rem;
+  background: linear-gradient(180deg, #202020 0%, #141212 100%), linear-gradient(180deg, #252526 -6.87%, #100F12 100%);
+  position: relative;
+  z-index: 1;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    @media @max1199 {
+      flex-direction: column;
+    }
+    @media @max575 {
+      padding: 15px;
+    }
+  }
+  &__contacts {
+    display: flex;
+    padding-top: 2rem;
+    @media @max1199 {
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+    @media @max767 {
+      flex-direction: column;
+    }
+  }
+  &__logo {
+    @media @max1199 {
+      order: 1;
+      margin-top: 70px;
+      margin-left: -40px;
+    }
+    @media @max575 {
+      width: 170px;
+      margin-left: -20px;
+    }
+  }
+  &__mail {
+    font-size: 0.93rem;
+    text-align: center;
+    color: #626262;
+    margin-top: 6rem;
+    @media @max575 {
+      margin-top: 1rem;
+    }
+  }
+  &__nav-title,
+  &__social-title {
+    color: #515151;
+    font-size: 0.93rem;
+  }
+  &__nav {
+    font-size: 0.93rem;
+    margin-right: 8.3rem;
+    &-left {
+      margin-right: 4.7rem;
+    }
+    &-title {
+      margin-bottom: 2.7rem;
+      @media @max767 {
+        margin-bottom: 1.2rem;
+      }
+    }
+    @media @max767 {
+      margin-bottom: 4.6rem;
+      margin-right: 0;
+    }
+  }
+  &__nav-item:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  &__nav-wrapper {
+    display: flex;
+  }
+  &__social {
+    &-title {
+      margin-bottom: 1.7rem;
+      @media @max767 {
+        margin-bottom: 1.2rem;
+      }
+    }
+    &-wrapper {
+      display: flex;
+    }
+    &-left {
+      margin-right: 1.1rem;
+    }
+    &-link {
+      padding: 12px 0px;       
+      width: 144px;        
+      text-align: center;
+      border-radius: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &:not(:last-child){
+        margin-bottom: 1.1rem;
+      }
+      &:before {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+      }
+      &.youtube {
+        color: lighten(#000, 13%);
+        padding-right: 21px;
+        padding-left: 17px;
+        &:before {
+          background-image: url('../img/footer/youtube.svg');
+        }
+      }
+      &.binance {
+        padding-right: 25px;
+        padding-left: 17px;
+        &:before {
+          background-image: url('../img/footer/binance.svg');
+        }
+      }
+      &.telegram {
+        padding-right: 17px;
+        padding-left: 16px;
+        &:before {
+          background-image: url('../img/footer/telegram.svg');
+        }
+      }
+      &.okx {
+        &:before {
+          width: 0;
+          height: 0;
+        }
+      }
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+  @media @max767 {
+    padding-top: 1rem;
+  }
+}

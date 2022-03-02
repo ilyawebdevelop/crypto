@@ -1,0 +1,379 @@
+// main: main.less
+.lessons {
+  background: linear-gradient(360deg, #181818 -6.87%, #1F1E21 100%);
+  padding-bottom: 10rem;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    @media @max991 {
+      flex-direction: column;
+    }
+  }
+  &__title {   
+    margin-bottom: 2.6rem;
+    text-align: start;
+    @media @max767 {
+      text-align: center;
+    }
+  }
+  &__left {
+    width: 926px; 
+    @media @max1400 {
+      width: 60%;
+    }  
+    @media @max991 {
+      width: 100%;
+    }
+  }
+  &__left-top {
+    background: linear-gradient(180deg, #3E3E41 0%, #363638 100%);
+    border-radius: 2px;
+    height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @media @max1400 {
+      height: 400px;
+    }  
+    @media @max767 {
+      height: 300px;
+    }  
+    @media @max575 {
+      height: 186px;
+    }
+  }
+  &__desc {
+    &-parametres {
+      display: flex;
+      @media @max767 {
+        flex-direction: column;
+      } 
+    }
+    &-title {
+      font-weight: @semibold;
+      font-size: 1.2rem;
+      margin-top: 2rem;
+      margin-bottom: 8px;
+    }
+    &-text {
+      color: #8F8E90;
+      margin-bottom: 1.4rem;
+      line-height: 1.3;    
+      @media @max767 {
+        font-size: 0.93rem;
+      } 
+    }
+    &-duration {
+      font-size: 0.93rem;
+      margin-right: 2.2rem;
+      font-weight: @bold;
+      @media @max767 {
+        margin-bottom: 8px;
+      } 
+      &-name {
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+    &-topic {
+      font-size: 0.93rem;
+      font-weight: @bold;
+      &-name {
+        color: #8F8E90;
+      }
+      &-list {
+        display: inline-block;
+      }
+    }
+  }
+  &__right {
+    width: 388px;
+    @media @max1400 {
+      width: 39%;
+    }
+    @media @max991 {
+      width: 100%;
+      margin-top: 3rem;
+    }
+    &-top {
+      background: linear-gradient(360deg, #181818 -6.87%, #1F1E21 100%);
+      height: 520px;
+      @media @max1400 {
+        height: 350px;
+      }
+      @media @max767 {
+        height: 433px;
+      }     
+      @media @max575 {
+        height: 453px;
+      }    
+    }
+  }
+  &__tabs {
+    display: flex;
+    margin-bottom: 8px;
+  }
+  &__tab {    
+    color: #605E5E;
+    font-weight: @extrabold;
+    font-size: 1.06rem;
+    width: 50%;
+    padding: 12px 0px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    border: none;
+    background-color: #2D2D2F;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media @max767 {
+      font-size: 0.8rem;
+    }   
+    &.active {
+      color: #fff;
+      background: linear-gradient(180deg, #3E3E41 0%, #363638 100%);
+      &:before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;  
+        background: url('../img/lessons/tizer-img.svg') no-repeat center center / cover;  
+        @media @max767 {
+          width: 12px;
+          height: 12px;
+        }    
+      }
+    }
+  }
+  &__themes {
+    max-height: 100%;
+    overflow: scroll;
+    height: 470px;
+    scrollbar-color: #212328 #212328;     /* «цвет ползунка» «цвет полосы скроллбара» */
+    scrollbar-width: 12px | none;
+    &::-webkit-scrollbar-thumb {
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    &::-webkit-scrollbar-corner {
+      display: none;
+    }
+    @media @max1400 {     
+      height: 459px;
+    }
+    @media @max767 {
+      overflow: hidden;
+      height: 386px;
+    }
+    @media @max767 {
+      overflow: hidden;
+      height: 404px;
+    }
+  }
+  &__theme {
+    padding: 18px 18px 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #47474A;
+    background: #363638;
+    cursor: pointer;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      width: 13px;
+      height: 8px;
+      background: url('../img/lessons/lesson-arrow.svg') no-repeat center center / cover;
+    }
+    &-desc {
+      display: none;
+    }
+    &.active {
+      display: block;
+      .lessons__theme-desc {
+        display: block;
+      }
+      &:after {
+        content: '94%';
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: none;
+        top: 1.2rem;
+        right: 2.4rem;
+        color: #C6A47C
+        ;
+      }
+      .lessons__theme-title {
+        margin-top: 20px;
+        margin-bottom: 8px;
+      }
+      .lessons__theme-text {
+        line-height: 1.4;
+      }
+      .value {
+        background-color: #595959;
+        width: 100%;
+        position: absolute;
+        height: 5px;
+        bottom: 0;
+        left: 0;
+        .value-box {
+          background: linear-gradient(103.31deg, #B3854D 5.67%, #F3D7AF 28.06%, #C6A47C 85.27%);
+          height: 100%;
+        }
+      }
+    }  
+    @media @max767 {
+      font-size: 0.93rem;
+    } 
+  }
+  &__right-bottom {
+    margin-top: 3.7rem;
+  }
+  &__visible-btn {
+    display: none;
+    @media @max767 {
+      display: block;
+      cursor: pointer;
+      text-transform: uppercase;
+      background: transparent;
+      border: none;
+      color: #5E5E5E;
+      margin: 24px auto 20px;
+    }
+  }
+  &__questions {
+    text-align: center;
+    &-title {
+      font-size: 1.2rem;
+      font-weight: @semibold;
+      margin-bottom: 8px;
+    }
+    &-desc {
+      color: #8F8E90;
+    }
+    &-btns {
+      display: flex;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+    &-btn {
+      width: 144px;
+      font-weight: @bold;
+      font-size: 0.9rem;
+      padding: 14px 0px;
+      &:first-child {
+        margin-right: 1rem;
+      }
+      &:last-child {        
+        background-image: none;
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: #fff;
+        border: 1px solid #fff;
+      }
+    }  
+    @media @max767 {      
+      border: 1px solid #37373A;
+      padding-top: 23px;
+      padding-bottom: 24px;
+    }  
+  }
+  &__overlay {
+    display: none;
+    padding-top: 1.7rem;
+    padding-left: 1.7rem;
+    background: rgba(24, 24, 24, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &-title {
+      font-weight: @extrabold;
+      font-size: 1.06rem;
+      text-transform: uppercase;      
+    }
+    &-offer {
+      text-align: center;
+      max-width: 375px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 50%;
+      transform: translateY(-50%);
+      &-title {
+        font-weight: @extrabold;
+        font-size: 1.06rem;
+        text-transform: uppercase;
+        line-height: 1.4;
+        margin-bottom: 8px;
+      }
+      &-desc {
+        font-size: 0.93rem;
+        line-height: 1.3;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      &-btns {
+        margin-top: 2.8rem;
+        display: flex;
+        justify-content: center;
+      }
+    } 
+    &.active {
+      display: block;
+    }   
+  }
+  &__video-btn {    
+    img {
+      cursor: pointer;
+      transition: all 0.5s ease;
+      opacity: 0.6;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+.lessons__btn-bottom-right {
+  display: none;
+  position: absolute;
+  right: 8px;
+  bottom: 60px;
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.15);
+  &:hover {
+    background: rgba(0, 0, 0, 0.06); 
+  }
+  @media @max767 {
+    bottom: 1rem;
+  }
+  &.active {
+    display: block;
+  }
+}
+.lessons__btn {
+  display: flex;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 1.06rem;
+  width: 246px;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  background-color: #000;
+  border: 1px solid @gold;
+  &:after {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 14px;
+    margin-left: 10px;
+    background: url('../img/courses/courses-arrow.svg') no-repeat center center;
+  }
+  @media @max767 {
+    width: 200px;
+  }
+}

@@ -1,0 +1,126 @@
+// main: main.less
+/*MODAL*/
+#register-form {
+  width: 100%;
+  height: 100%;
+  display: none;
+  text-align: center;
+  input {
+    padding: 20px;
+    width: 324px;
+    border-radius: 18px;
+    background-color: #2D2D2F;
+    border: 1px solid #575759;    
+    text-transform: uppercase;
+    font-weight: @bold;
+    font-size: 0.93rem;
+    &::placeholder {
+      color: #575759;
+    }
+    &::-moz-placeholder {
+      color: #575759;
+    }
+    &::-webkit-input-placeholder {
+      color: #575759;
+    }   
+    &:first-child {
+      margin-bottom: 1.1rem;
+    }
+    &:last-of-type {
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 400px){
+      
+    }
+  }
+  .register-form__title-inner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 334px;
+    margin-bottom: 2rem;
+    align-items: center;
+  }
+  .register-form__title {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: @extrabold;
+  }
+  .register-form__btn {
+    width: 100%;
+    padding: 20px;   
+    font-size: 1rem;
+    max-width: 324px;
+    font-weight: @bold;
+  }
+  .register-form__account-have {
+    margin-top: 1.4rem;
+    text-transform: uppercase;
+    font-weight: @bold;
+    font-size: 0.8rem;
+    a {
+      text-decoration: underline;
+      display: inline-block;
+    }
+  }
+  .register-form__pass-forget {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: underline;
+    margin-top: 0.5rem;
+    margin-bottom: 1.6rem;    
+  }
+  .register-form__personal {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.77rem;
+    line-height: 1.4;
+    span {
+      margin-bottom: 0px;
+    }
+    a {
+      text-decoration: underline;
+      color: inherit;
+      display: inline-block;
+    }
+  }
+}
+#register-form.active{
+  display: block;
+}
+#register-form__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background: rgba(24, 24, 24, 0.9);
+}
+#register-form__window {
+  border: 1px solid #C6A47C;
+  padding: 2rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  background: linear-gradient(95.45deg, #3E3E41 0%, #363638 104.2%);
+  max-width: 388px;
+  @media (max-width: 400px){
+    padding: 1rem;
+  }
+}
+.register-form__content {
+ 
+}
+
+#register-form__btn-close {
+  cursor: pointer;
+  background: url('../img/modal/btn-close.svg') no-repeat top right / contain;
+  display: block;
+  width: 14px;
+  height: 14px;
+ 
+  outline: none;
+  border: none;
+}
+ 

@@ -1,0 +1,81 @@
+// main: main.less
+.intro {
+  height: 94vh;
+  &__shadow {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0555556) 0%, rgba(0, 0, 0, 0.0555556) 0%, rgba(0, 0, 0, 0.0555556) 53.12%, rgba(24, 24, 24, 0.73) 72.4%, #181818 91.67%);
+    height: 100%;
+    width: 100%;
+    .intro__offer {
+      text-align: center;
+      padding-bottom: 80px;
+    }
+  }
+  &__baner {
+    height: 100%;
+    @media @max575 {
+      background-position-x: right!important;
+    }
+  }
+  &__btns {
+    display: flex;
+    max-width: 320px;
+    margin: 0 auto;
+    .intro__btn {
+      &:first-child {
+        margin-right: 1.6rem;
+        @media @max575 {
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+      &:last-child {
+        @media @max575 {
+          margin-top: 0.8rem;
+        }
+      }
+    }
+    @media @max575 {
+      flex-direction: column;
+    }
+  }
+  &__btn {
+    margin: 62px auto 0;    
+    @media @max575 {
+      margin-top: 40px;
+    }
+  }
+}
+.intro__subtitle {
+  margin: 15px auto 0;
+  margin-top: 15px;
+  display: block;
+  max-width: 320px;
+  line-height: 1.3em;
+  @media @max575 {
+    color: #DADADB;
+  }
+}
+.intro__video-btn {
+  margin-bottom: 179px;
+  img {
+    transition: all 0.5s ease;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  @media @max575 {
+    margin-bottom: 115px;
+  }
+  &.course {
+  }
+  @media @max767 {
+    margin-bottom: 6rem;
+  }   
+}
+.intro__video-btn img{
+  margin: 0 auto;
+  cursor: pointer;
+}

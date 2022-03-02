@@ -1,0 +1,60 @@
+// main: main.less
+.btn {	
+	font-family: @manrope;
+	font-weight: @extrabold;
+	position: relative;
+	font-size: 1.06rem;
+  text-transform: uppercase;
+	transition: all 0.7s linear;
+	display: block;
+	color: #C6A47C;	
+	text-align: center;
+	cursor: pointer;
+	box-shadow: 0px 20px 30px -18px rgba(0, 0, 0, 0.25);
+	padding: 0.97rem 0px;
+	border: 1px solid @gold;
+	border-radius: 18px;
+  width: 196px;	
+	background: rgba(0, 0, 0, 0.15);
+	backdrop-filter: blur(15px);
+  background-image: linear-gradient(90deg, #B2854D 0%, #F3D7AF 28.13%, #C6A47C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	&:hover {
+		box-shadow: 0px 20px 30px -18px rgba(0, 0, 0, 0.09);
+	}
+	@media @max991 {		
+		padding: 1.2rem 0px;
+		font-size: 0.8rem;
+	}
+}
+.courses__btn {
+	border: none;
+	color: @gold;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 164px;
+	font-size: 1.33rem;
+	&::after {
+		content: '';
+		display: block;
+		width: 23.3px;
+		height: 16.3px;
+		background: url('../img/courses/courses-arrow.svg') no-repeat center center / cover;
+	}
+	@media @max575 {
+		font-size: 1.06rem;
+		width: 140px;
+	}
+}
+.instruction__btn {
+	font-size: 1.06rem;
+	color: #fff;
+	background-image: none;
+	-webkit-text-fill-color: unset;
+	-webkit-background-clip: unset;
+	&:hover {
+		background:  rgba(0, 0, 0, 0.09);
+	}
+}

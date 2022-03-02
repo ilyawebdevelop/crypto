@@ -1,0 +1,124 @@
+// main: main.less
+.courses {
+  background: linear-gradient(360deg, #181818 -6.87%, #1F1E21 100%);
+  &__list {
+    display: flex;    
+    width: 100%;  
+    @media @max1400 {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &__item {
+    
+    width: 33.33%;
+    transition: all 0.5s ease;
+    background: linear-gradient(180deg, #202022 0%, #222224 100%);    
+    min-height: 950px;
+    &-top {
+      height: 338px;  
+      transition: all 0.5s ease;   
+      margin-bottom: 6rem;    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media @max767 {
+        margin-bottom: 0;       
+      }
+    }
+    &-bottom {
+      min-height: 382px;
+      @media @max575 {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+    &-link {
+      display: block;    
+    }
+    &:hover {
+      transition: all 0.5s ease;   
+      width: 34%;    
+      box-shadow: 0px 8px 0px rgba(51, 51, 51, 1);    
+      background: linear-gradient(180deg, #333336 0%, #2A2A2E 100%);
+      .courses__item-top {
+        height: 500px;
+        margin-bottom: 2rem;
+      }
+      .courses__item-bottom {
+        min-height: auto;
+      }
+      .courses__text {
+        padding: 0rem 3rem 2rem 4rem;
+      }
+      .courses__video-btn {
+        opacity: 0.5;
+      }
+      @media @max1400 {
+        width: 55%;
+        .courses__item-top {
+          height: 338px;
+          margin-bottom: 6rem;
+        }
+        .courses__text {
+          padding: 2rem 6rem 2rem 6rem
+        }
+      }
+      @media @max991 {
+        width: 100%;
+        .courses__text {
+          padding: 0rem 3rem 2rem 4rem;
+        }
+      }
+      @media @max991 {
+        width: 100%;
+        .courses__text {
+          padding: 0rem 1rem 2rem 1rem;
+        }
+        .courses__item-top {
+          height: 338px;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    @media @max1400 {
+      width: 55%;
+    }
+    @media @max991 {
+      width: 100%;
+    }
+    @media @max767 {
+      min-height: 745px;
+    }
+  }
+  &__text {
+    padding: 2rem 6rem 2rem 6rem;
+    transition: all 0.5s ease;
+    &-title {
+      text-align: start;
+      margin-bottom: 1rem;
+      font-weight: @extrabold;
+    }
+    &-list {
+      margin-bottom: 2.5rem;
+    }
+    &-item {
+      line-height: 1.5em;
+      list-style-type: disc;
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+      color: darken(#fff, 13%);
+      font-weight: @semibold;
+      @media @max575 {
+        font-size: 0.95rem;
+      }
+    }
+    @media @max767 {
+      padding: 2rem 1.5rem 2rem 1.5rem;
+    }
+  }
+  &__video-btn {
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+}
