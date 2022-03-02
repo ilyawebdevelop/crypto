@@ -525,7 +525,7 @@ select {
   font-size: 1.2rem;
 }
 .intro {
-  height: 94vh;
+  height: 100%;
 }
 .intro__shadow {
   display: flex;
@@ -538,6 +538,7 @@ select {
 .intro__shadow .intro__offer {
   text-align: center;
   padding-bottom: 80px;
+  padding-top: 24%;
 }
 .intro__baner {
   height: 100%;
