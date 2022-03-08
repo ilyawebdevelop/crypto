@@ -1727,7 +1727,7 @@ select {
   outline: none;
   border: none;
 }
-/*MODAL-CALL*/
+/*MODAL-VIDEO*/
 #video-modal {
   width: 100%;
   height: 100%;
@@ -1754,8 +1754,15 @@ select {
   z-index: 11;
   max-width: 100%;
 }
-.video-modal__content {
-  padding: 0px 48px 37px;
+@media (max-width: 767px) {
+  #player {
+    width: 90vw;
+  }
+}
+@media (max-width: 575px) {
+  #player {
+    height: 200px;
+  }
 }
 .instruction-junior {
   background: #191919;
