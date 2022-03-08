@@ -1744,7 +1744,7 @@ select {
   width: 100%;
   height: 100%;
   z-index: 10;
-  background: #fcd341c2;
+  background: rgba(24, 24, 24, 0.9);
 }
 #video-modal__window {
   position: fixed;
