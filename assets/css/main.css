@@ -1727,6 +1727,36 @@ select {
   outline: none;
   border: none;
 }
+/*MODAL-CALL*/
+#video-modal {
+  width: 100%;
+  height: 100%;
+  display: none;
+  text-align: center;
+}
+#video-modal.active {
+  display: block;
+}
+#video-modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: #fcd341c2;
+}
+#video-modal__window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  max-width: 100%;
+}
+.video-modal__content {
+  padding: 0px 48px 37px;
+}
 .instruction-junior {
   background: #191919;
 }
