@@ -1817,6 +1817,13 @@ select {
   margin-bottom: 0;
   margin-right: 20px;
 }
+.instruction-junior__video-btn {
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.instruction-junior__video-btn:hover {
+  color: #C6A47C;
+}
 .instruction-junior__free-block {
   background: linear-gradient(180deg, #333336 0%, #2A2A2E 100%);
   padding: 20px 30px;
@@ -1836,4 +1843,21 @@ select {
   background-color: transparent;
   border: none;
   color: #fff;
+}
+.instruction-junior__chapters-title {
+  color: #C6A47C;
+  padding: 7px;
+  background: linear-gradient(180deg, #333336 0%, #2A2A2E 100%);
+  width: 120px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.instruction-junior__chapters-block {
+  margin-bottom: 20px;
+  background: linear-gradient(180deg, #333336 0%, #2A2A2E 100%);
+  padding: 20px 30px;
+}
+.instruction-junior__chapters-block-text {
+  color: #E9E4E4;
 }
